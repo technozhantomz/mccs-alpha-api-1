@@ -1,0 +1,19 @@
+{
+    "name": "Mutual Credits",
+    "short_name": "MCN",
+    "icons": [
+        {
+            "src": "/static/image/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/image/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#287208",
+    "background_color": "#cbdeef",
+    "display": "standalone"
+}

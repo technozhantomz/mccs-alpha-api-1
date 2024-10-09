@@ -1,0 +1,106 @@
+#version: '3'
+
+services:
+  # Web Service
+  web:
+    container_name: mccs
+    build:
+      context: .
+      dockerfile: dockerfile.production
+      args:
+        - GIT_TAG=$GIT_TAG
+        - BUILD_DATE=$BUILD_DATE
+        - GIT_COMMIT=$GIT_COMMIT
+        - GIT_TREE_STATUS=$GIT_TREE_STATUS
+    restart: always
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres
+      - mongo
+      - es01
+
+  # PostgreSQL Service
+  postgres:
+    container_name: postgres
+    image: postgres:11.4
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=mccs
+    volumes:
+      - postgresql:/var/lib/postgresql/data
+
+  # MongoDB Service
+  mongo:
+    container_name: mongo
+    image: mongo:4.0.10
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+      - restore:/data/restore
+
+  # Elasticsearch Service
+  es01:
+    container_name: es01
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.5
+    restart: always
+    environment:
+      - node.name=es01
+      # single-node discovery type.
+      - discovery.type=single-node
+      # JVM memory: initial and max set to 512MB.
+    ports:
+      - 9200:9200
+    volumes:
+      - esdata01:/usr/share/elasticsearch/data
+    healthcheck:
+        test: ["CMD-SHELL", "curl --silent --fail localhost:9200/_cluster/health || exit 1"]
+        interval: 30s
+        timeout: 30s
+        retries: 3
+
+  # Kibana Service
+  kibana:
+    container_name: kibana
+    image: docker.elastic.co/kibana/kibana:7.1.1
+    restart: always
+    environment:
+      - ELASTICSEARCH_HOSTS=http://es01:9200
+    ports:
+      - 5601:5601
+    depends_on:
+      - es01
+
+# Persistent Volumes
+volumes:
+  mongodb:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: 'mnt/mccs_data/mongo'
+  esdata01:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: 'mnt/mccs_data/es'
+  restore:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: 'mnt/mccs_data/restore'
+  postgresql:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: 'mnt/mccs_data/postgres'

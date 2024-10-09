@@ -1,0 +1,269 @@
+[
+    {
+        "name": "Pete's Painting",
+        "incType": "sole",
+        "companyNumber": "none",
+        "website": "https://petes-painting.null",
+        "telephone": "+442074848484",
+        "declaredTurnover": 150000,
+        "email": "api-test-user01-entity@ic3.dev",
+        "categories": [
+            "Painting"
+        ],
+        "offers": [
+            {
+                "name": "painting",
+                "createdAt": "2020-02-16T08:40:10.249Z"
+            }
+        ],
+        "wants": [
+            {
+                "name": "vegetables",
+                "createdAt": "2020-02-16T08:40:10.249Z"
+            },
+            {
+                "name": "wine",
+                "createdAt": "2020-02-16T08:40:10.249Z"
+            }
+        ],
+        "description": "Indoor and outdoor painting specialist.",
+        "address": "456 Main",
+        "city": "London",
+        "region": "Greater London",
+        "postalCode": "UK1 2ENG",
+        "country": "England",
+        "status": "tradingAccepted",
+        "createdAt": "2020-02-16T08:40:10.249Z",
+        "receiveDailyMatchNotificationEmail": true,
+        "showTagsMatchedSinceLastLogin": true
+    },
+    {
+        "name": "Joe's Woodworking",
+        "incType": "sole",
+        "companyNumber": "none",
+        "website": "https://joes-woodworking.null",
+        "telephone": "+442089292929",
+        "declaredTurnover": 50000,
+        "email": "api-test-user02-entity@ic3.dev",
+        "categories": [
+            "Carpentry"
+        ],
+        "offers": [
+            {
+                "name": "carpentry",
+                "createdAt": "2020-02-16T08:37:08.218Z"
+            },
+            {
+                "name": "painting",
+                "createdAt": "2020-02-16T08:39:10.249Z"
+            }
+        ],
+        "wants": [
+            {
+                "name": "pizza",
+                "createdAt": "2020-02-16T08:37:08.218Z"
+            },
+            {
+                "name": "beer",
+                "createdAt": "2020-02-16T08:37:08.218Z"
+            }
+        ],
+        "description": "High quality carpentry at a reasonable price.",
+        "address": "789 Main",
+        "city": "London",
+        "region": "Greater London",
+        "postalCode": "UK1 2ENG",
+        "country": "England",
+        "status": "tradingAccepted",
+        "createdAt": "2020-02-16T08:35:55.758Z",
+        "receiveDailyMatchNotificationEmail": true,
+        "showTagsMatchedSinceLastLogin": true
+    },
+    {
+        "name": "Farmer Freddy's Veg",
+        "incType": "sole",
+        "companyNumber": "none",
+        "website": "https://farmer-freddy.null",
+        "telephone": "+4420832132132",
+        "declaredTurnover": 10000,
+        "email": "api-test-user03-entity@ic3.dev",
+        "categories": [
+            "Organic Produce"
+        ],
+        "offers": [
+            {
+                "name": "organic-vegetables",
+                "createdAt": "2020-02-20T06:45:55.849Z"
+            },
+            {
+                "name": "organic-fruits",
+                "createdAt": "2020-02-20T06:45:55.849Z"
+            },
+            {
+                "name": "flour",
+                "createdAt": "2020-02-20T06:45:55.849Z"
+            }
+        ],
+        "wants": [
+            {
+                "name": "carpentry",
+                "createdAt": "2020-02-20T06:45:55.849Z"
+            },
+            {
+                "name": "beer",
+                "createdAt": "2020-02-20T06:45:55.849Z"
+            }
+        ],
+        "description": "Only the freshest organic produce of the highest quality.",
+        "address": "123 Main",
+        "city": "London",
+        "region": "Greater London",
+        "postalCode": "UK1 2ENG",
+        "country": "England",
+        "status": "tradingAccepted",
+        "createdAt": "2020-02-20T06:45:55.849Z",
+        "receiveDailyMatchNotificationEmail": true,
+        "showTagsMatchedSinceLastLogin": true
+    },
+    {
+        "name": "Betty's Baked Goods",
+        "incType": "sole",
+        "companyNumber": "none",
+        "website": "https://betty-bakes.null",
+        "telephone": "+442087070707",
+        "declaredTurnover": 32000,
+        "email": "api-test-user04-entity@ic3.dev",
+        "categories": [
+            "Bakery"
+        ],
+        "offers": [
+            {
+                "name": "baked-goods",
+                "createdAt": "2020-02-24T09:45:52.849Z"
+            },
+            {
+                "name": "bread",
+                "createdAt": "2020-02-24T09:45:52.849Z"
+            },
+            {
+                "name": "pasteries",
+                "createdAt": "2020-02-24T09:45:52.849Z"
+            }
+        ],
+        "wants": [
+            {
+                "name": "organic-fruits",
+                "createdAt": "2020-02-24T09:45:52.849Z"
+            },
+            {
+                "name": "flour",
+                "createdAt": "2020-02-24T09:45:52.849Z"
+            }
+        ],
+        "description": "The tastiest baked goods in this solar system!",
+        "address": "575 Main",
+        "city": "London",
+        "region": "Greater London",
+        "postalCode": "UK1 2ENG",
+        "country": "England",
+        "status": "tradingAccepted",
+        "createdAt": "2020-02-24T09:45:52.849Z",
+        "receiveDailyMatchNotificationEmail": true,
+        "showTagsMatchedSinceLastLogin": true
+    },
+    {
+        "name": "Herbie's Hipster Brews",
+        "incType": "plc",
+        "companyNumber": "999888777",
+        "website": "https://herbie-brews.null",
+        "telephone": "+442012345678",
+        "declaredTurnover": 250000,
+        "email": "api-test-user05-entity@ic3.dev",
+        "categories": [
+            "Brewery",
+            "Restaurant"
+        ],
+        "offers": [
+            {
+                "name": "craft-beers",
+                "createdAt": "2020-02-27T17:12:30.849Z"
+            },
+            {
+                "name": "beer",
+                "createdAt": "2020-02-27T17:12:30.849Z"
+            },
+            {
+                "name": "pizza",
+                "createdAt": "2020-02-27T17:12:30.849Z"
+            }
+        ],
+        "wants": [
+            {
+                "name": "organic-flour",
+                "createdAt": "2020-02-27T17:12:30.849Z"
+            },
+            {
+                "name": "organic-vegetables",
+                "createdAt": "2020-02-27T17:12:30.849Z"
+            }
+        ],
+        "description": "Quality brews, tasty pizza...what more could you want?",
+        "address": "575 Main",
+        "city": "London",
+        "region": "Greater London",
+        "postalCode": "UK1 2ENG",
+        "country": "England",
+        "status": "tradingAccepted",
+        "createdAt": "2020-02-27T17:12:30.849Z",
+        "receiveDailyMatchNotificationEmail": true,
+        "showTagsMatchedSinceLastLogin": true
+    },
+    {
+        "name": "AA",
+        "email": "api-test-user06@ic3.dev",
+        "status": "rejected",
+        "createdAt": "2020-02-28T17:12:30.849Z",
+        "receiveDailyMatchNotificationEmail": false,
+        "showTagsMatchedSinceLastLogin": false
+    },
+    {
+        "name": "DD",
+        "email": "api-test-user07@ic3.dev",
+        "status": "pending",
+        "createdAt": "2020-02-29T17:12:30.849Z",
+        "receiveDailyMatchNotificationEmail": false,
+        "showTagsMatchedSinceLastLogin": false
+    },
+    {
+        "name": "EE",
+        "email": "api-test-user08@ic3.dev",
+        "status": "accepted",
+        "createdAt": "2020-03-01T17:12:30.849Z",
+        "receiveDailyMatchNotificationEmail": false,
+        "showTagsMatchedSinceLastLogin": false
+    },
+    {
+        "name": "GG",
+        "email": "api-test-user09@ic3.dev",
+        "status": "tradingRejected",
+        "createdAt": "2020-03-02T17:12:30.849Z",
+        "receiveDailyMatchNotificationEmail": false,
+        "showTagsMatchedSinceLastLogin": false
+    },
+    {
+        "name": "II",
+        "email": "api-test-user10@ic3.dev",
+        "status": "tradingPending",
+        "createdAt": "2020-03-03T07:12:30.849Z",
+        "receiveDailyMatchNotificationEmail": false,
+        "showTagsMatchedSinceLastLogin": false
+    },
+    {
+        "name": "JJ",
+        "email": "api-test-user11@ic3.dev",
+        "status": "accepted",
+        "createdAt": "2020-03-03T07:13:30.849Z",
+        "receiveDailyMatchNotificationEmail": false,
+        "showTagsMatchedSinceLastLogin": false
+    }
+]

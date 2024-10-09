@@ -1,0 +1,28 @@
+[
+    {
+        "name": "carpentry",
+        "createdAt": "2020-02-16T08:47:56.145Z"
+    },
+    {
+        "name": "painting",
+        "createdAt": "2020-02-16T08:40:10.255Z"
+    },
+    {
+        "name": "car-repair"
+    },
+    {
+        "name": "brewery"
+    },
+    {
+        "name": "restaurant"
+    },
+    {
+        "name": "transport"
+    },
+    {
+        "name": "organic-produce"
+    },
+    {
+        "name": "bakery"
+    }
+]

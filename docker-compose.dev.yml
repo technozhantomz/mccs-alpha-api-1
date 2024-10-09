@@ -1,0 +1,92 @@
+#version: '3'
+
+services:
+  # Web Service
+  web:
+    container_name: mccs
+    build:
+      context: .
+      dockerfile: dockerfile.dev
+    volumes:
+      # mounts the current directory to /usr/src/app in the container
+      - ./:/usr/src/app
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres
+      - mongo
+      - redis
+      - es01
+
+  # PostgreSQL Service
+  postgres:
+    container_name: postgres
+    image: postgres:11.4
+    # Log all statements to the PostgreSQL log.
+    command: ["postgres", "-c", "log_statement=all"]
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=mccs
+    volumes:
+      - postgresql:/var/lib/postgresql/data
+
+  # MongoDB Service
+  mongo:
+    container_name: mongo
+    image: mongo:4.0.10
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+
+  # Redis Service
+  redis:
+    container_name: redis
+    image: redis:alpine
+    command: redis-server --requirepass sOmE_sEcUrE_pAsS
+    ports:
+      - 6379:6379
+    environment:
+      - REDIS_REPLICATION_MODE=master
+    volumes:
+      - redis:/data
+
+  # Elasticsearch Service
+  es01:
+    container_name: es01
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.5
+    environment:
+      - node.name=es01
+       # single-node discovery type.
+      - discovery.type=single-node
+      # JVM memory: initial and max set to 512MB.
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - 9200:9200
+    volumes:
+      - esdata01:/usr/share/elasticsearch/data
+    healthcheck:
+        test: ["CMD-SHELL", "curl --silent --fail localhost:9200/_cluster/health || exit 1"]
+        interval: 30s
+        timeout: 30s
+        retries: 3
+
+  # Kibana Service
+  kibana:
+    container_name: kibana
+    image: docker.elastic.co/kibana/kibana:7.1.1
+    environment:
+      - ELASTICSEARCH_HOSTS=http://es01:9200
+    ports:
+      - 5601:5601
+    depends_on:
+      - es01
+
+# Persistent Volumes
+volumes:
+  postgresql:
+  mongodb:
+  redis:
+  esdata01:

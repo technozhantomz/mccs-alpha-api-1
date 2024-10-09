@@ -1,0 +1,17 @@
+[
+    {
+        "email": "api-test-admin1@ic3.dev",
+        "name": "admin1",
+        "password": "password1!"
+    },
+    {
+        "email": "api-test-admin2@ic3.dev",
+        "name": "admin2",
+        "password": "password1!"
+    },
+    {
+        "email": "api-test-admin3@ic3.dev",
+        "name": "admin3",
+        "password": "password1!"
+    }
+]
