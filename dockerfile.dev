@@ -1,5 +1,5 @@
 # Base image from which we are building.
-FROM golang:1.19.5-alpine
+FROM golang:1.24.0-alpine
 
 WORKDIR /usr/src/app
 

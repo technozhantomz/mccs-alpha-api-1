@@ -1,6 +1,6 @@
 module github.com/technoshantoms/mccs-alpha-api
 
-go 1.21
+go 1.24
 
 require (
 	github.com/ShiraazMoollatjie/goluhn v0.0.0-20200114194008-196cda0245b9
