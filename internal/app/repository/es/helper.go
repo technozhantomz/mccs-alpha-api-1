@@ -4,7 +4,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/olivere/elastic/v7"
+	"github.com/elastic/go-elasticsearch/v8" 
 )
 
 func newWildcardQuery(name, text string) *elastic.BoolQuery {

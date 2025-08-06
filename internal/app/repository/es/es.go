@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/technoshantoms/mccs-alpha-api/global"
-	"github.com/olivere/elastic/v7"
+	"github.com/elastic/go-elasticsearch/v8"
 	"github.com/spf13/viper"
 )
 

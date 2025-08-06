@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/technoshantoms/mccs-alpha-api/internal/app/types"
-	"github.com/olivere/elastic/v7"
+	"github.com/elastic/go-elasticsearch/v8"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 

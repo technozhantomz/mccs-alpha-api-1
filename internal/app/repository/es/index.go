@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/olivere/elastic/v7"
+	"github.com/elastic/go-elasticsearch/v8"
 )
 
 func checkIndexes(client *elastic.Client) {
